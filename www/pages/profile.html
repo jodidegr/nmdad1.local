@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DogRun</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/nomalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/grid.css">
+
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="wrapper">
+
+    <nav>
+        <div class="container_nav">
+            <div class="logo_nav"> </div>
+
+            <h1 class="mobile"> Profile</h1>
+            <div class="navDesktop">
+            <a href="profile.html"> <div class="navBut profile active"> </div> </a>
+            <a href="gorun.html"> <div class="navBut gorun"> </div> </a>
+            <a href="map.html"> <div class="navBut map"> </div> </a>
+            <a href="friends.html"> <div class="navBut friends"> </div> </a>
+            <a href="../index.html"> <div class="navBut home"> </div> </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container containerProfile">    
+
+            <!--- Title --> 
+            <div class="row">    <!--- dus eerst maak je een nieuwe rij aan, die je verdeeld in verschillende cols -->
+                <div class=" col-12 visByDesktop">
+                    <div class="boxLR">
+                        <h1 id="titelProfile" class="desktop"> Profile </h1>
+                    </div>
+                </div>
+	        </div>
+
+            <!--- Profile content -->
+            <div class="row marginByMobProf">    <!--- dus eerst maak je een nieuwe rij aan, die je verdeeld in verschillende cols -->
+                    <div class=" col-12">
+                            <div id="informationToShow">
+                                <div class="profilePic"></div>
+                                <div class="information"> 
+                                        <h3>First name:</h3> <p id="firstNameP"> </p>
+                                        <h3>Name:</h3> <p id="nameP"></p>
+                                        <h3>Address:</h3> <p id="addressP"></p>
+                                        <h3>Sex:</h3> <p id="sexP"></p>
+                                        <h3>E-mail:</h3> <p id="emailP"></p>
+                                </div>
+                        </div>
+
+                                    <!-- Trigger/Open The Modal -->
+                                    <div class="knop" id="myBtnLogin"><p class="buttons">Login</p></div>
+                                    <div class="knop" id="myBtnRegister"><p class="buttons">Register</p></div>
+                                    <div class="knop" id="myBtnRLogout"><p class="buttons">Log out</p></div>
+                                    <!-- !!!!! LOGIN !!!!!!!! -->
+                                            <div id="loginPopUp" class="modal">
+                                                        <!-- Modal content -->
+                                                        <div class="modal-content">
+                                                            <h2 class="pop-upLogin"> Log in </h2>
+                                                            <span class="closeLogin">&times;</span>
+                                                                            <form name = "loginform">
+                                                                                    <p class="form">Username:</p><br>
+                                                                                    <input required type="text" name="username">
+                                                                                    <br>
+                                                                                    <p class="form">Password:</p><br>
+                                                                                    <input required type="password" name="pword">
+                                                                                    <br><br>
+                                                                            </form>
+                                                                            <div value="Check In" name="Submit" onclick= "validate()" class="knop knopLoginPROFILE"> <p class="buttons"> Log in </p> </div>
+                                                        </div>
+                                            </div>
+                                    <!-- !!!!! REGISTER !!!!!!!! -->
+                                            <div id="registerPopUp" class="modal">
+                                                        <!-- Modal content -->
+                                                        <div class="modal-content">
+                                                            <h2 class="pop-upRegister"> Register </h2>
+                                                            <span class="closeRegister">&times;</span>
+                                                                            <form name = "myform">
+                                                                                    <p class="form">First name:</p> <br>
+                                                                                    <input  id="firstname" type="text" name="firstNameP"></input>
+                                                                                    <p class="form">Surname:</p> <br>
+                                                                                    <input id="surname" type="text" name="surname"></input>
+                                                                                    <p class="form">Address:</p> <br>
+                                                                                    <input id="address" type="text" name="address"></input>
+                                                                                    <p class="form">Sex:</p> <br>
+                                                                                    <input id="sex" type="text" name="sex"></input>
+                                                                                    <p class="form">E-mail:</p> <br>
+                                                                                    <input id="email" type="text" name="email"></input>
+                                                                                    <p class="form">Username:</p><br>
+                                                                                    <input required type="text" name="firstName">
+                                                                                    <br>
+                                                                                    <p class="form">Password:</p><br>
+                                                                                    <input required type="password" name="pword">
+
+                                                                                    <br><br>
+                                                                            </form>
+                                                                            <div value="Check In" name="Submit" onclick="weergevenRegisterInfo()" class="knop knopLoginPROFILE sluitRegistKnop" id="myBtnRegister"> <p class="buttons"> Register </p> </div>
+                                                        </div>
+                                            </div>
+                    </div>
+	        </div>
+            <div class="row" id="informationDog&kmToShow">
+                    <div class="col-6 myDogs">
+                            <h2>My dogs</h2>
+                            <div class="informationDog">
+                                <div class="picHond"></div>
+                                <h3>Name:</h3> <p id="dognameP"> Cooper </p>
+                                <h3>Sex:</h3> <p id="dogsexP">Male </p>
+                                <h3>Dog breed:</h3> <p id="dogbreedP">Belgian Malinois </p>
+                            </div>
+                            <div class="knop knopDog"> <p class="buttons" id="myBtnChangeDog"> Change dog </p> </div>
+
+                            <div id="DogPopUp" class="modal">
+                                                        <!-- Modal content -->
+                                                        <div class="modal-content">
+                                                            <h2 class="pop-upDog"> Your dog's information </h2>
+                                                            <span class="closeDog">&times;</span>
+                                                                            <form name = "Dogform">
+                                                                                    <p class="form">Name:</p><br>
+                                                                                    <input id="inputDogName" required type="text" name="dognameValue">
+                                                                                    <br>
+                                                                                    <p class="form">Sex:</p><br>
+                                                                                    <input id="inputDogSex" required type="text" name="dogsexValue">
+                                                                                    <p class="form">Dog breed:</p><br>
+                                                                                    <input id="inputDogBreed" required type="text" name="dognameValue">
+                                                                                    <br>
+                                                                                    <br><br>
+                                                                            </form>
+                                                                            <div value="Check In" name="Submit" onclick= "validateDOG()" id="knopDogPROFILE" class="knop knopLoginPROFILE"> <p class="buttons"> Confirm changes </p> </div>
+                                                        </div>
+                                            </div>
+                        
+                    </div>
+                    <div class="col-6 numKm">
+                        <h2>Number of run km</h2>
+                        <h3>Total:</h3> <p> 18678 km </p>
+                        <h3>This year:</h3> <p>679 km </p>
+                        <h3>This month:</h3> <p>58 km </p>
+                        <h3>This week:</h3> <p> 32 km </p>
+                        <h3>Today:</h3> <p> 13 km </p>
+                    </div>
+            </div>
+    </div>
+
+
+<script src="../js/profile.js"></script>
+</body>
+
+<footer>
+    <div class="footerbijMob">
+            <a href="profile.html"> <div class="navBut profile active"> </div> </a>
+            <a href="gorun.html"> <div class="navBut gorun"> </div> </a>
+            <a href="../index.html"> <div class="navBut home"> </div> </a>
+            <a href="map.html"> <div class="navBut map"> </div> </a>
+            <a href="friends.html"> <div class="navBut friends"> </div> </a>
+    </div>
+
+    <div class="footerbijDesk">
+        <p class="pFooter"> Jodie De Greef &#38; Niel Duquesne &#169; 2016 DogRun, Inc. All rights reserved.</p>
+    </div>
+
+</footer>
+</html>
