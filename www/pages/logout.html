@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DogRun</title>
+
     <link rel="stylesheet" type="text/css" href="../css/nomalize.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/grid.css">
@@ -33,44 +34,49 @@
             <div class="logo_nav"> </div>
 
             <div class="navDesktop">
-                <a href="gorun.html"> <div class="navBut gorun"> </div> </a>
-                <a href="map.html"> <div class="navBut map active"> </div> </a>
-                <a href="logout.html"> <div class="navBut logout"> </div> </a>
+            <a href="gorun.html"> <div class="navBut gorun"> </div> </a>
+            <a href="map.html"> <div class="navBut map"> </div> </a>
+            <a href="logout.html"> <div class="navBut logout active"> </div> </a>
             </div>
         </div>
     </nav>
 
-    <div class="container containerMap ">    
+    <div class="container containerProfile">    
 
             <!--- Title --> 
-            <div class="row">    <!--- dus eerst maak je een nieuwe rij aan, die je verdeeld in verschillende cols -->
-                <div class=" col-12 visByDesktop">
+            <div class="row"> 
+                <div class=" col-12">
                     <div class="boxLR">
-                        <h1 class="desktop"> Map </h1>
+                        <h1 id="titelProfile" class="desktop"> Welkom! </h1>
                     </div>
                 </div>
 	        </div>
 
-            <!--- Map  -->
-
-            <div class="row">
-                <div class="col-12 marginByMobMap">
-                    <iframe src="https://datatank.stad.gent/4/infrastructuur/hondenvoorzieningen.map" allowfullscreen></iframe>
-                </div>
-            </div>
-            
-
-
-
+            <!--- Profile content -->
+            <div class="row marginByMobProf">  
+                    <div class=" col-12">
+                            <a href="../index.html"><div class="knop" id="myBtnRLogout"><p class="buttons">Log uit</p></div></a>            
+                    </div>
+                    <div class=" col-12">
+                            <img class="hond1" src="../images/hond1.png">
+                            <img class="hond2" src="../images/hond2.png"> 
+                    </div>    
+                    <div class=" col-12">
+                            <p class="logout">Jodie De Greef & Niel Duquesne </p> <p class="logout"> © 2017 DogRun, Inc. All rights reserved.</p>  
+                    </div> 
+	        </div>
     </div>
 
+<script src="../js/login.js"></script>
+<script src="../js/normalize.js"></script>
+<script src="../js/login.js"></script>
 </body>
 
 <footer>
     <div class="footerbijMob">
             <a href="gorun.html"> <div class="navBut gorun"> </div> </a>
-            <a href="logout.html"> <div class="navBut logout"> </div> </a>
-            <a href="map.html"> <div class="navBut map active"> </div> </a>
+            <a href="logout.html"> <div class="navBut logout active"> </div> </a>
+            <a href="map.html"> <div class="navBut map"> </div> </a>
     </div>
 
     <div class="footerbijDesk">
@@ -78,5 +84,4 @@
     </div>
 
 </footer>
-
 </html>

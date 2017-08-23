@@ -31,14 +31,10 @@
     <nav>
         <div class="container_nav">
             <div class="logo_nav"> </div>
-
-            <h1 class="mobile"> Go run </h1>
             <div class="navDesktop">
-            <a href="profile.html"> <div class="navBut profile"> </div> </a>
             <a href="gorun.html"> <div class="navBut gorun active"> </div> </a>
             <a href="map.html"> <div class="navBut map"> </div> </a>
-            <a href="friends.html"> <div class="navBut friends"> </div> </a>
-            <a href="../index.html"> <div class="navBut home"> </div> </a>
+            <a href="logout.html"> <div class="navBut logout"> </div> </a>
             </div>
         </div>
     </nav>
@@ -46,8 +42,8 @@
     <div class="container containerGorun">    
 
             <!--- Title --> 
-            <div class="row">    <!--- dus eerst maak je een nieuwe rij aan, die je verdeeld in verschillende cols -->
-                <div class=" col-12 visByDesktop">
+            <div class="row">
+                <div class=" col-12">
                     <div class="boxLR">
                         <h1 class="desktop"> Go run</h1>
                     </div>
@@ -56,97 +52,85 @@
 
              <div class="row marginByMobGorun">
                     <div class="col-3 knoppenZij">
-                             
-                            <h2>Options</h2>
-                        
                             <form class="informationdog" action="">
                             </form>
-                           <div class="knop GuronOptieKnop" onclick="myFunctionFreerun()"><p class="buttons">Freerun Zone</p></div>  
-                           <div class="knop GuronOptieKnop" onclick="myFunctionDogtoilet()"><p class="buttons">Dog Toilet</p></div>  
-                           <div class="knop GuronOptieKnop" onclick="myFunctionParks()"><p class="buttons">Parks</p></div>
-                          
-                
+                           <div class="knop GuronOptieKnop" id="knopGorun1" onclick="myFunctionFreerun()"><p class="buttons">Losloopweides</p></div>  
+                           <div class="knop GuronOptieKnop" id="knopGorun2" onclick="myFunctionDogtoilet()"><p class="buttons">Hondentoiletten</p></div>  
+                           <div class="knop GuronOptieKnop" id="knopGorun3" onclick="myFunctionParks()"><p class="buttons">Parken</p></div>
                     </div>
                         
-                    <div id="evenstijlveranderen" class="col-9 ChoseYourOpties">
-                        <h2 id="titelOption">Choose your option!</h2>
-                            <!-- losloopweides -->
+                    <div id="panel_height" class="col-9 ChoseYourOpties">
+                        <h2 id="titelOption">Kies één van de drie opties!</h2>
                          <div  id="panel">               
                                         <div class="kaderOpties">
-                                                <p id="sector" class="list_gorun">Street:</p> <p id="straat_id"> </p>
-                                                <p id="parknaam" class="list_gorun">City:</p> <p id="gemeente_id"></p>
-                                                <p id="speeltuin" class="list_gorun">Sort:</p> <p id="soort_id"></p>
-                                                <p id="opp" class="list_gorun">House number:</p> <p id="hn_id"></p>
-                                                <p id="lengte" class="list_gorun">Decsription:</p> <p id="besch_id"></p>
+                                                <p id="sector" class="list_gorun">Straat:</p> <p id="straat_id"> </p>
+                                                <p id="parknaam" class="list_gorun">Stad:</p> <p id="gemeente_id"></p>
+                                                <p id="speeltuin" class="list_gorun">Soort:</p> <p id="soort_id"></p>
+                                                <p id="opp" class="list_gorun">Nummer:</p> <p id="hn_id"></p>
+                                                <p id="lengte" class="list_gorun">Beschrijving:</p> <p id="besch_id"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector1"  class="list_gorun">Street:</p> <p id="straat_id1"> </p>
-                                                <p id="parknaam1" class="list_gorun">City:</p> <p id="gemeente_id1"></p>
-                                                <p id="speeltuin1" class="list_gorun">Sort:</p> <p id="soort_id1"></p>
-                                                <p id="opp1" class="list_gorun">House number:</p> <p id="hn_id1"></p>
-                                                <p id="lengte1" class="list_gorun">Decsription:</p> <p id="besch_id1"></p>
+                                                <p id="sector1"  class="list_gorun">Straat:</p> <p id="straat_id1"> </p>
+                                                <p id="parknaam1" class="list_gorun">Stad:</p> <p id="gemeente_id1"></p>
+                                                <p id="speeltuin1" class="list_gorun">Soort:</p> <p id="soort_id1"></p>
+                                                <p id="opp1" class="list_gorun">Nummer:</p> <p id="hn_id1"></p>
+                                                <p id="lengte1" class="list_gorun">Beschrijving:</p> <p id="besch_id1"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector2" class="list_gorun">Street:</p> <p id="straat_id2"> </p>
-                                                <p id="parknaam2" class="list_gorun">City:</p> <p id="gemeente_id2"></p>
-                                                <p id="speeltuin2" class="list_gorun">Sort:</p> <p id="soort_id2"></p>
-                                                <p id="opp2" class="list_gorun">House number:</p> <p id="hn_id2"></p>
-                                                <p id="lengte2" class="list_gorun">Decsription:</p> <p id="besch_id2"></p>
+                                                <p id="sector2" class="list_gorun">Straat:</p> <p id="straat_id2"> </p>
+                                                <p id="parknaam2" class="list_gorun">Stad:</p> <p id="gemeente_id2"></p>
+                                                <p id="speeltuin2" class="list_gorun">Soort:</p> <p id="soort_id2"></p>
+                                                <p id="opp2" class="list_gorun">Nummer:</p> <p id="hn_id2"></p>
+                                                <p id="lengte2" class="list_gorun">Beschrijving:</p> <p id="besch_id2"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector3" class="list_gorun">Street:</p> <p id="straat_id3"> </p>
-                                                <p id="parknaam3" class="list_gorun">City:</p> <p id="gemeente_id3"></p>
-                                                <p id="speeltuin3" class="list_gorun">Sort:</p> <p id="soort_id3"></p>
-                                                <p id="opp3" class="list_gorun">House number:</p> <p id="hn_id3"></p>
-                                                <p id="lengte3" class="list_gorun">Decsription:</p> <p id="besch_id3"></p>
+                                                <p id="sector3" class="list_gorun">Straat:</p> <p id="straat_id3"> </p>
+                                                <p id="parknaam3" class="list_gorun">Stad:</p> <p id="gemeente_id3"></p>
+                                                <p id="speeltuin3" class="list_gorun">Soort:</p> <p id="soort_id3"></p>
+                                                <p id="opp3" class="list_gorun">Nummer:</p> <p id="hn_id3"></p>
+                                                <p id="lengte3" class="list_gorun">Beschrijving:</p> <p id="besch_id3"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector4" class="list_gorun">Street:</p> <p id="straat_id4"> </p>
-                                                <p id="parknaam4" class="list_gorun">City:</p> <p id="gemeente_id4"></p>
-                                                <p id="speeltuin4" class="list_gorun">Sort:</p> <p id="soort_id4"></p>
-                                                <p id="opp4" class="list_gorun">House number:</p> <p id="hn_id4"></p>
-                                                <p id="lengte4" class="list_gorun">Decsription:</p> <p id="besch_id4"></p>
+                                                <p id="sector4" class="list_gorun">Straat:</p> <p id="straat_id4"> </p>
+                                                <p id="parknaam4" class="list_gorun">Stad:</p> <p id="gemeente_id4"></p>
+                                                <p id="speeltuin4" class="list_gorun">Soort:</p> <p id="soort_id4"></p>
+                                                <p id="opp4" class="list_gorun">Nummer:</p> <p id="hn_id4"></p>
+                                                <p id="lengte4" class="list_gorun">Beschrijving:</p> <p id="besch_id4"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector5" class="list_gorun">Street:</p> <p id="straat_id5"> </p>
-                                                <p id="parknaam5" class="list_gorun">City:</p> <p id="gemeente_id5"></p>
-                                                <p id="speeltuin5" class="list_gorun">Sort:</p> <p id="soort_id5"></p>
-                                                <p id="opp5" class="list_gorun">House number:</p> <p id="hn_id5"></p>
-                                                <p id="lengte5" class="list_gorun">Decsription:</p> <p id="besch_id5"></p>
+                                                <p id="sector5" class="list_gorun">Straat:</p> <p id="straat_id5"> </p>
+                                                <p id="parknaam5" class="list_gorun">Stad:</p> <p id="gemeente_id5"></p>
+                                                <p id="speeltuin5" class="list_gorun">Soort:</p> <p id="soort_id5"></p>
+                                                <p id="opp5" class="list_gorun">Nummer:</p> <p id="hn_id5"></p>
+                                                <p id="lengte5" class="list_gorun">Beschrijving:</p> <p id="besch_id5"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector6" class="list_gorun">Street:</p> <p id="straat_id6"> </p>
-                                                <p id="parknaam6" class="list_gorun">City:</p> <p id="gemeente_id6"></p>
-                                                <p id="speeltuin6" class="list_gorun">Sort:</p> <p id="soort_id6"></p>
-                                                <p id="opp6" class="list_gorun">House number:</p> <p id="hn_id6"></p>
-                                                <p id="lengte6" class="list_gorun">Decsription:</p> <p id="besch_id6"></p>
+                                                <p id="sector6" class="list_gorun">Straat:</p> <p id="straat_id6"> </p>
+                                                <p id="parknaam6" class="list_gorun">Stad:</p> <p id="gemeente_id6"></p>
+                                                <p id="speeltuin6" class="list_gorun">Soort:</p> <p id="soort_id6"></p>
+                                                <p id="opp6" class="list_gorun">Nummer:</p> <p id="hn_id6"></p>
+                                                <p id="lengte6" class="list_gorun">Beschrijving:</p> <p id="besch_id6"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector7" class="list_gorun">Street:</p> <p id="straat_id7"> </p>
-                                                <p id="parknaam7" class="list_gorun">City:</p> <p id="gemeente_id7"></p>
-                                                <p id="speeltuin7" class="list_gorun">Sort:</p> <p id="soort_id7"></p>
-                                                <p id="opp7" class="list_gorun">House number:</p> <p id="hn_id7"></p>
-                                                <p id="lengte7" class="list_gorun">Decsription:</p> <p id="besch_id7"></p>
+                                                <p id="sector7" class="list_gorun">Straat:</p> <p id="straat_id7"> </p>
+                                                <p id="parknaam7" class="list_gorun">Stad:</p> <p id="gemeente_id7"></p>
+                                                <p id="speeltuin7" class="list_gorun">Soort:</p> <p id="soort_id7"></p>
+                                                <p id="opp7" class="list_gorun">Nummer:</p> <p id="hn_id7"></p>
+                                                <p id="lengte7" class="list_gorun">Beschrijving:</p> <p id="besch_id7"></p>
                                         </div>
                                         <div class="kaderOpties">
-                                                <p id="sector8" class="list_gorun">Street:</p> <p id="straat_id8"> </p>
-                                                <p id="parknaam8" class="list_gorun">City:</p> <p id="gemeente_id8"></p>
-                                                <p id="speeltuin8" class="list_gorun">Sort:</p> <p id="soort_id8"></p>
-                                                <p id="opp8" class="list_gorun">House number:</p> <p id="hn_id8"></p>
-                                                <p id="lengte8" class="list_gorun">Decsription:</p> <p id="besch_id8"></p>
+                                                <p id="sector8" class="list_gorun">Straat:</p> <p id="straat_id8"> </p>
+                                                <p id="parknaam8" class="list_gorun">Stad:</p> <p id="gemeente_id8"></p>
+                                                <p id="speeltuin8" class="list_gorun">Soort:</p> <p id="soort_id8"></p>
+                                                <p id="opp8" class="list_gorun">Nummer:</p> <p id="hn_id8"></p>
+                                                <p id="lengte8" class="list_gorun">Beschrijving:</p> <p id="besch_id8"></p>
                                         </div>
                          </div>
-
                     </div>
             </div>
-
+        </div>
 </div>
-
-
-    </div>
      
-                                                 
-
 
 <script src="../js/utils.js"> </script>
 <script src="../js/datagedoe.js"> </script>
@@ -155,15 +139,13 @@
 
 <footer>
     <div class="footerbijMob">
-            <a href="profile.html"> <div class="navBut profile "> </div> </a>
             <a href="gorun.html"> <div class="navBut gorun active"> </div> </a>
-            <a href="../index.html"> <div class="navBut home"> </div> </a>
+            <a href="logout.html"> <div class="navBut logout"> </div> </a>
             <a href="map.html"> <div class="navBut map"> </div> </a>
-            <a href="friends.html"> <div class="navBut friends"> </div> </a>
     </div>
 
     <div class="footerbijDesk">
-        <p class="pFooter"> Jodie De Greef &#38; Niel Duquesne &#169; 2016 DogRun, Inc. All rights reserved.</p>
+        <p class="pFooter"> Jodie De Greef &#38; Niel Duquesne &#169; 2017 DogRun, Inc. All rights reserved.</p>
     </div>
 
 </footer>

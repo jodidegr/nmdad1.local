@@ -1,3 +1,25 @@
+
+var App = {
+    "parken":{},
+    "init":function(){
+        var self = this;
+        
+        var url = "/data/parken.json";
+        self.loadJson(url);
+    },
+    "loadJson":function(url){
+        var results = Utils.getJSONByPromise(url);
+        console.log("Results",results);
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+   App.init();
+});
+
+
+
+
 var losloopweides = [ 
             {
                     Straat:"Azaleastraat",
@@ -222,59 +244,62 @@ document.getElementById("knopFreeRun").addEventListener("click", function(){
 function myFunctionFreerun() {
         /* weergeven bij drukken knop */
         document.getElementById("panel").style.display = "block";
-        document.getElementById("evenstijlveranderen").style.height = "auto";
+        document.getElementById("panel_height").style.height = "auto";
+        document.getElementById("knopGorun1").style.backgroundColor = "#FFD54F";
+        document.getElementById("knopGorun2").style.backgroundColor = "#AAC0AE";
+        document.getElementById("knopGorun3").style.backgroundColor = "#AAC0AE";
         /*veranderen titel*/
-        document.getElementById("titelOption").innerHTML = "Freerun Zones"
+        document.getElementById("titelOption").innerHTML = "Losloopweides"
         /* veranderen titels van gegevens options */
-            document.getElementById("sector").innerHTML  = 'Street:';
-            document.getElementById("sector1").innerHTML  = 'Street:';
-            document.getElementById("sector2").innerHTML  = 'Street:';
-            document.getElementById("sector3").innerHTML  = 'Street:';
-            document.getElementById("sector4").innerHTML  = 'Street:';
-            document.getElementById("sector5").innerHTML  = 'Street:';
-            document.getElementById("sector6").innerHTML  = 'Street:';
-            document.getElementById("sector7").innerHTML  = 'Street:';
-            document.getElementById("sector8").innerHTML  = 'Street:';
+            document.getElementById("sector").innerHTML  = 'Straat:';
+            document.getElementById("sector1").innerHTML  = 'Straat:';
+            document.getElementById("sector2").innerHTML  = 'Straat:';
+            document.getElementById("sector3").innerHTML  = 'Straat:';
+            document.getElementById("sector4").innerHTML  = 'Straat:';
+            document.getElementById("sector5").innerHTML  = 'Straat:';
+            document.getElementById("sector6").innerHTML  = 'Straat:';
+            document.getElementById("sector7").innerHTML  = 'Straat:';
+            document.getElementById("sector8").innerHTML  = 'Straat:';
 
-            document.getElementById("parknaam").innerHTML  = 'City:';
-            document.getElementById("parknaam1").innerHTML  = 'City:';
-            document.getElementById("parknaam2").innerHTML  = 'City:';
-            document.getElementById("parknaam3").innerHTML  = 'City:';
-            document.getElementById("parknaam4").innerHTML  = 'City:';
-            document.getElementById("parknaam5").innerHTML  = 'City:';
-            document.getElementById("parknaam6").innerHTML  = 'City:';
-            document.getElementById("parknaam7").innerHTML  = 'City:';
-            document.getElementById("parknaam8").innerHTML  = 'City:';
+            document.getElementById("parknaam").innerHTML  = 'Stad:';
+            document.getElementById("parknaam1").innerHTML  = 'Stad:';
+            document.getElementById("parknaam2").innerHTML  = 'Stad:';
+            document.getElementById("parknaam3").innerHTML  = 'Stad:';
+            document.getElementById("parknaam4").innerHTML  = 'Stad:';
+            document.getElementById("parknaam5").innerHTML  = 'Stad:';
+            document.getElementById("parknaam6").innerHTML  = 'Stad:';
+            document.getElementById("parknaam7").innerHTML  = 'Stad:';
+            document.getElementById("parknaam8").innerHTML  = 'Stad:';
 
-            document.getElementById("speeltuin").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin1").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin2").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin3").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin4").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin5").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin6").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin7").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin8").innerHTML  = 'Sort:';
+            document.getElementById("speeltuin").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin1").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin2").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin3").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin4").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin5").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin6").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin7").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin8").innerHTML  = 'Soort:';
 
-            document.getElementById("opp").innerHTML  = 'House number:';
-            document.getElementById("opp1").innerHTML  = 'House number:';
-            document.getElementById("opp2").innerHTML  = 'House number:';
-            document.getElementById("opp3").innerHTML  = 'House number:';
-            document.getElementById("opp4").innerHTML  = 'House number:';
-            document.getElementById("opp5").innerHTML  = 'House number:';
-            document.getElementById("opp6").innerHTML  = 'House number:';
-            document.getElementById("opp7").innerHTML  = 'House number:';
-            document.getElementById("opp8").innerHTML  = 'House number:';
+            document.getElementById("opp").innerHTML  = 'Nummer:';
+            document.getElementById("opp1").innerHTML  = 'Nummer:';
+            document.getElementById("opp2").innerHTML  = 'Nummer:';
+            document.getElementById("opp3").innerHTML  = 'Nummer:';
+            document.getElementById("opp4").innerHTML  = 'Nummer:';
+            document.getElementById("opp5").innerHTML  = 'Nummer:';
+            document.getElementById("opp6").innerHTML  = 'Nummer:';
+            document.getElementById("opp7").innerHTML  = 'Nummer:';
+            document.getElementById("opp8").innerHTML  = 'Nummer:';
 
-            document.getElementById("lengte").innerHTML  = 'Description:';
-            document.getElementById("lengte1").innerHTML  = 'Description:';
-            document.getElementById("lengte2").innerHTML  = 'Description:';
-            document.getElementById("lengte3").innerHTML  = 'Description:';
-            document.getElementById("lengte4").innerHTML  = 'Description:';
-            document.getElementById("lengte5").innerHTML  = 'Description:';
-            document.getElementById("lengte6").innerHTML  = 'Description:';
-            document.getElementById("lengte7").innerHTML  = 'Description:';
-            document.getElementById("lengte8").innerHTML  = 'Description:';
+            document.getElementById("lengte").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte1").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte2").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte3").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte4").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte5").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte6").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte7").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte8").innerHTML  = 'Beschrijving:';
 
             /* inladen gegevens */
             document.getElementById("straat_id").innerHTML = losloopweides[0].Straat;
@@ -335,59 +360,62 @@ function myFunctionFreerun() {
 function myFunctionDogtoilet(){
         /* weergeven bij drukken knop */
         document.getElementById("panel").style.display = "block";
-        document.getElementById("evenstijlveranderen").style.height = "auto";
+        document.getElementById("panel_height").style.height = "auto";
+        document.getElementById("knopGorun2").style.backgroundColor = "#FFD54F";
+        document.getElementById("knopGorun3").style.backgroundColor = "#AAC0AE";
+        document.getElementById("knopGorun1").style.backgroundColor = "#AAC0AE";
         /*veranderen titel*/
-        document.getElementById("titelOption").innerHTML = "Dog toilets"
+        document.getElementById("titelOption").innerHTML = "Hondentoiletten"
                 /* veranderen titels van gegevens options */
-            document.getElementById("sector").innerHTML  = 'Street:';
-            document.getElementById("sector1").innerHTML  = 'Street:';
-            document.getElementById("sector2").innerHTML  = 'Street:';
-            document.getElementById("sector3").innerHTML  = 'Street:';
-            document.getElementById("sector4").innerHTML  = 'Street:';
-            document.getElementById("sector5").innerHTML  = 'Street:';
-            document.getElementById("sector6").innerHTML  = 'Street:';
-            document.getElementById("sector7").innerHTML  = 'Street:';
-            document.getElementById("sector8").innerHTML  = 'Street:';
+            document.getElementById("sector").innerHTML  = 'Straat:';
+            document.getElementById("sector1").innerHTML  = 'Straat:';
+            document.getElementById("sector2").innerHTML  = 'Straat:';
+            document.getElementById("sector3").innerHTML  = 'Straat:';
+            document.getElementById("sector4").innerHTML  = 'Straat:';
+            document.getElementById("sector5").innerHTML  = 'Straat:';
+            document.getElementById("sector6").innerHTML  = 'Straat:';
+            document.getElementById("sector7").innerHTML  = 'Straat:';
+            document.getElementById("sector8").innerHTML  = 'Straat:';
 
-            document.getElementById("parknaam").innerHTML  = 'City:';
-            document.getElementById("parknaam1").innerHTML  = 'City:';
-            document.getElementById("parknaam2").innerHTML  = 'City:';
-            document.getElementById("parknaam3").innerHTML  = 'City:';
-            document.getElementById("parknaam4").innerHTML  = 'City:';
-            document.getElementById("parknaam5").innerHTML  = 'City:';
-            document.getElementById("parknaam6").innerHTML  = 'City:';
-            document.getElementById("parknaam7").innerHTML  = 'City:';
-            document.getElementById("parknaam8").innerHTML  = 'City:';
+            document.getElementById("parknaam").innerHTML  = 'Stad:';
+            document.getElementById("parknaam1").innerHTML  = 'Stad:';
+            document.getElementById("parknaam2").innerHTML  = 'Stad:';
+            document.getElementById("parknaam3").innerHTML  = 'Stad:';
+            document.getElementById("parknaam4").innerHTML  = 'Stad:';
+            document.getElementById("parknaam5").innerHTML  = 'Stad:';
+            document.getElementById("parknaam6").innerHTML  = 'Stad:';
+            document.getElementById("parknaam7").innerHTML  = 'Stad:';
+            document.getElementById("parknaam8").innerHTML  = 'Stad:';
 
-            document.getElementById("speeltuin").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin1").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin2").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin3").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin4").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin5").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin6").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin7").innerHTML  = 'Sort:';
-            document.getElementById("speeltuin8").innerHTML  = 'Sort:';
+            document.getElementById("speeltuin").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin1").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin2").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin3").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin4").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin5").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin6").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin7").innerHTML  = 'Soort:';
+            document.getElementById("speeltuin8").innerHTML  = 'Soort:';
 
-            document.getElementById("opp").innerHTML  = 'House number:';
-            document.getElementById("opp1").innerHTML  = 'House number:';
-            document.getElementById("opp2").innerHTML  = 'House number:';
-            document.getElementById("opp3").innerHTML  = 'House number:';
-            document.getElementById("opp4").innerHTML  = 'House number:';
-            document.getElementById("opp5").innerHTML  = 'House number:';
-            document.getElementById("opp6").innerHTML  = 'House number:';
-            document.getElementById("opp7").innerHTML  = 'House number:';
-            document.getElementById("opp8").innerHTML  = 'House number:';
+            document.getElementById("opp").innerHTML  = 'Nummer:';
+            document.getElementById("opp1").innerHTML  = 'Nummer:';
+            document.getElementById("opp2").innerHTML  = 'Nummer:';
+            document.getElementById("opp3").innerHTML  = 'Nummer:';
+            document.getElementById("opp4").innerHTML  = 'Nummer:';
+            document.getElementById("opp5").innerHTML  = 'Nummer:';
+            document.getElementById("opp6").innerHTML  = 'Nummer:';
+            document.getElementById("opp7").innerHTML  = 'Nummer:';
+            document.getElementById("opp8").innerHTML  = 'Nummer:';
 
-            document.getElementById("lengte").innerHTML  = 'Description:';
-            document.getElementById("lengte1").innerHTML  = 'Description:';
-            document.getElementById("lengte2").innerHTML  = 'Description:';
-            document.getElementById("lengte3").innerHTML  = 'Description:';
-            document.getElementById("lengte4").innerHTML  = 'Description:';
-            document.getElementById("lengte5").innerHTML  = 'Description:';
-            document.getElementById("lengte6").innerHTML  = 'Description:';
-            document.getElementById("lengte7").innerHTML  = 'Description:';
-            document.getElementById("lengte8").innerHTML  = 'Description:';
+            document.getElementById("lengte").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte1").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte2").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte3").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte4").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte5").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte6").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte7").innerHTML  = 'Beschrijving:';
+            document.getElementById("lengte8").innerHTML  = 'Beschrijving:';
 
             /* inladen gegevens */
             document.getElementById("straat_id").innerHTML = dogtoilets[0].Straat;
@@ -448,9 +476,12 @@ function myFunctionDogtoilet(){
 function myFunctionParks(){
         /* weergeven bij drukken knop */
         document.getElementById("panel").style.display = "block";
-        document.getElementById("evenstijlveranderen").style.height = "auto";
+        document.getElementById("panel_height").style.height = "auto";
+        document.getElementById("knopGorun3").style.backgroundColor = "#FFD54F";
+        document.getElementById("knopGorun2").style.backgroundColor = "#AAC0AE";
+        document.getElementById("knopGorun1").style.backgroundColor = "#AAC0AE";
         /*veranderen titel*/
-        document.getElementById("titelOption").innerHTML = "Parks"
+        document.getElementById("titelOption").innerHTML = "Parken"
                 /* veranderen titels van gegevens options */
             document.getElementById("sector").innerHTML  = 'Sector:';
             document.getElementById("sector1").innerHTML  = 'Sector:';
@@ -462,45 +493,45 @@ function myFunctionParks(){
             document.getElementById("sector7").innerHTML  = 'Sector:';
             document.getElementById("sector8").innerHTML  = 'Sector:';
 
-            document.getElementById("parknaam").innerHTML  = 'Name park:';
-            document.getElementById("parknaam1").innerHTML  = 'Name park:';
-            document.getElementById("parknaam2").innerHTML  = 'Name park:';
-            document.getElementById("parknaam3").innerHTML  = 'Name park:';
-            document.getElementById("parknaam4").innerHTML  = 'Name park:';
-            document.getElementById("parknaam5").innerHTML  = 'Name park:';
-            document.getElementById("parknaam6").innerHTML  = 'Name park:';
-            document.getElementById("parknaam7").innerHTML  = 'Name park:';
-            document.getElementById("parknaam8").innerHTML  = 'Name park:';
+            document.getElementById("parknaam").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam1").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam2").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam3").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam4").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam5").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam6").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam7").innerHTML  = 'Parknaam:';
+            document.getElementById("parknaam8").innerHTML  = 'Parknaam:';
 
-            document.getElementById("speeltuin").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin1").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin2").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin3").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin4").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin5").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin6").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin7").innerHTML  = 'Playground:';
-            document.getElementById("speeltuin8").innerHTML  = 'Playground:';
+            document.getElementById("speeltuin").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin1").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin2").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin3").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin4").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin5").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin6").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin7").innerHTML  = 'Speeltuin:';
+            document.getElementById("speeltuin8").innerHTML  = 'Speeltuin:';
 
-            document.getElementById("opp").innerHTML  = 'Surface:';
-            document.getElementById("opp1").innerHTML  = 'Surface:';
-            document.getElementById("opp2").innerHTML  = 'Surface:';
-            document.getElementById("opp3").innerHTML  = 'Surface:';
-            document.getElementById("opp4").innerHTML  = 'Surface:';
-            document.getElementById("opp5").innerHTML  = 'Surface:';
-            document.getElementById("opp6").innerHTML  = 'Surface:';
-            document.getElementById("opp7").innerHTML  = 'Surface:';
-            document.getElementById("opp8").innerHTML  = 'Surface:';
+            document.getElementById("opp").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp1").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp2").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp3").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp4").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp5").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp6").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp7").innerHTML  = 'Oppervlakte:';
+            document.getElementById("opp8").innerHTML  = 'Oppervlakte:';
 
-            document.getElementById("lengte").innerHTML  = 'Lenght:';
-            document.getElementById("lengte1").innerHTML  = 'Lenght:';
-            document.getElementById("lengte2").innerHTML  = 'Lenght:';
-            document.getElementById("lengte3").innerHTML  = 'Lenght:';
-            document.getElementById("lengte4").innerHTML  = 'Lenght:';
-            document.getElementById("lengte5").innerHTML  = 'Lenght:';
-            document.getElementById("lengte6").innerHTML  = 'Lenght:';
-            document.getElementById("lengte7").innerHTML  = 'Lenght:';
-            document.getElementById("lengte8").innerHTML  = 'Lenght:';
+            document.getElementById("lengte").innerHTML  = 'Lengte:';
+            document.getElementById("lengte1").innerHTML  = 'Lengte:';
+            document.getElementById("lengte2").innerHTML  = 'Lengte:';
+            document.getElementById("lengte3").innerHTML  = 'Lengte:';
+            document.getElementById("lengte4").innerHTML  = 'Lengte:';
+            document.getElementById("lengte5").innerHTML  = 'Lengte:';
+            document.getElementById("lengte6").innerHTML  = 'Lengte:';
+            document.getElementById("lengte7").innerHTML  = 'Lengte:';
+            document.getElementById("lengte8").innerHTML  = 'Lengte:';
 
             /* inladen gegevens */
             document.getElementById("straat_id").innerHTML = parken[0].Sector;

@@ -1,2 +1,107 @@
 .ahs-mdn-table {
 }
+
+
+/* fonts importeren */
+@font-face {
+    font-family: title_first;
+    src: url(../fonts/X360.ttf);
+}
+
+@font-face{
+    font-family: title_second;
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@font-face{
+    font-family: normal_regular;
+    src: url(../fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face{
+    font-family: normal_bold;
+    src: url(../fonts/AvenirNextLTPro-Bold.otf);
+}
+
+
+section{
+    margin-top: -40px !important;
+    height: 100% !important;
+}
+
+h1{
+    position: relative !important;
+    padding-left: 2000px !important;
+    margin-left:-2000px !important;
+    padding-right: 2000px !important;
+
+    background-color:#AEB77B;
+    padding-top:10px !important;
+    width: 100% !important;
+    font-family: title_first !important;
+    text-transform: capitalize !important;
+    text-align: left !important;
+    
+
+}
+
+h2{
+    float:left !important;
+    width: 100% !important;
+    text-align: left !important;
+    text-transform: capitalize !important;
+    color: #777777 !important;
+}
+
+
+p, ul, li {
+    font-size: 30px !important;
+    color: #555555 !important;
+    font-family: normal_regular !important;
+}
+
+ul.geheel{
+    float: left !important;
+    list-style-image: url("../images/listitem.png");
+}
+
+ul ul{
+    list-style-image: url("../images/listitem2.png");
+}
+
+button.navigate-up, button.navigate-down{
+    display: none !important;
+}
+
+
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  height: 15px !important; 
+  }
+
+
+.reveal .progress span {
+  background-color: #9dad65;}
+
+  /*********************************************
+ * CONTROLS
+ *********************************************/
+
+.reveal .controls .enabled {
+  opacity: 1 !important; }
+
+.reveal .controls .navigate-left {
+  border-right-color:#727b5c !important; }
+
+.reveal .controls .navigate-left.fragmented {
+  opacity: 1 !important; }
+
+.reveal .controls .navigate-right {
+  border-left-color: #727b5c !important; }
+
+.reveal .controls .navigate-right.fragmented {
+  opacity: 1 !important; }

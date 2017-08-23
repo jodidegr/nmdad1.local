@@ -61,7 +61,7 @@ p.buttons{color:white; }
 div.knop{
     background-color:#AAC0AE;
     width: 300px;
-    float: right;
+    float: left;
     margin-left: 10px;
     text-align: center;
     height: 53px;
@@ -70,6 +70,10 @@ div.knop{
 div.knop:hover{background-color: #FFD54F ;}
 
     div.knop p{margin-top: 18px;}
+
+
+
+
 
 /******************** CHANGE BY MOBILE **********************/
 @media only screen and (max-width: 620px) {
@@ -105,7 +109,7 @@ div.logo_nav{
 /************************************************************  Navigatie  ********************************************/
 /*********************************************************************************************************************/
 
-nav{ /* die witte randen wegkrijgen lukt me niet... heb al enkele dingen geprobeerd... */
+nav{ 
     background-color: #9FAC65;
     width: 100%;
     height: 50px;
@@ -135,11 +139,11 @@ div.logo_nav{
 div.navBut{
     height: 45px;
     width: 55px;
-    padding: 2.5px; /* ik heb 5px bij HxB weggelaten, zodat afbeelding niet tegen kant plakt */
+    padding: 2.5px; 
     float: right;
 }
     /* algemeen voor knoppen */
-        div.home, div.friends, div.map, div.gorun, div.profile, div.login{
+        div.home, div.map, div.gorun, div.logout{
             background-repeat: no-repeat;
             background-position: center; 
             background-size: 90%;
@@ -148,51 +152,56 @@ div.navBut{
         div.home{ background-image: url("../nav_icons/Icon_Home.png");}
         div.home:hover{
             background-color:#727b5b; 
+            height:50px!important;
         }
-    
-    /* friendsknop */
-        div.friends{ background-image: url("../nav_icons/Icon_vrienden.png");}
-        div.friends:hover{
-            background-color:#727b5b; 
-        }
+
     /* Mapknop */
         div.map{ background-image: url("../nav_icons/Icon_kaart.png");}
         div.map:hover{
             background-color:#727b5b; 
+            height:50px!important;
         }
     /* Gorunknop */
         div.gorun{ background-image: url("../nav_icons/Icon_gorun.png");}
         div.gorun:hover{
             background-color:#727b5b; 
+            height:50px!important;
         }
-    /* Profileknop */
-        div.profile{ background-image: url("../nav_icons/Icon_instellingen.png");}
-        div.profile:hover{
+    /* Logoutknop */
+        div.logout{ background-image: url("../nav_icons/Icon_Home.png");}
+        div.logout:hover{
             background-color:#727b5b; 
+            height:50px!important;
         }
-    /* Loginknop */ 
-        div.login{  background-image: url("../nav_icons/login.png"); 
-                    background-size: 40px; }
+
+
 
 /* wanneer actief: achtergrond gekleurd */
-    .active{background-color:#727b5b; }
+    .active{
+        background-color:#727b5b;
+        height:50px!important; 
+        }
 
 
 /******************** CHANGE BY MOBILE **********************/
 @media only screen and (max-width: 620px) {
 
-nav{ 
-    position: fixed;
-    top: 0; 
-}
+/* algemeen voor knoppen */
+        div.home, div.map, div.gorun, div.logout{
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size: 50%!important;
+        }
+
+
+
 
 div.container_nav{width: 340px;}
 
 /* algemeen aan knopjes nav */
 div.navBut{
-    height: 45px;
-    width: 55px;
-    padding: 2.5px; /* ik heb 5px bij HxB weggelaten, zodat afbeelding niet tegen kant plakt */
+    width: 113px!important;
+    padding: 2.5px;
     float: right;
 }
 
@@ -204,98 +213,164 @@ div.navDesktop{
     position: absolute;
 }
 
-} /*tot hier veranderingen bij mobiel*/
+} 
+
+/*tot hier veranderingen bij mobiel*/
 
 /*********************************************************************************************************************/
 /***********************************  HOME PAGE  ***********************************/
 /*********************************************************************************************************************/
 
-/* navigatieblokken op de homepage */
+/* Information */
+div.information{
+    width: 500px;
+    margin-left: 10px;
+    float: left;
 
-.h_friends, .h_gorun, .h_home, .h_map, .h_profile{
-    background-repeat: no-repeat;
-            background-position: center; 
-            background-size: 90%;
-            height: 220px;            
+}
+        div.information p {margin-bottom: 10px; }
+
+/* pop up Login */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-        .h_home{ 
-            background-image: url("../nav_icons/Icon_Home.png"); 
-            background-color: #737B5B;}
-            .h_home:hover{background-image: url("../nav_icons/Icon_Homehover.png");}
-        .h_friends{ 
-            background-image: url("../nav_icons/Icon_vrienden.png");
-            background-color: #AAC0AE;}
-            .h_friends:hover{background-image: url("../nav_icons/Icon_vriendenhover.png"); }
-        .h_map{ 
-            background-image: url("../nav_icons/Icon_kaart.png");
-            background-color: #FFD54F;}
-            .h_map:hover{background-image: url("../nav_icons/Icon_kaarthover.png");}
-        .h_gorun{ 
-            background-image: url("../nav_icons/Icon_gorun.png");
-            background-color: #9FAC65;}
-            .h_gorun:hover{background-image: url("../nav_icons/Icon_gorunhover.png");}
-        .h_profile{ 
-            background-image: url("../nav_icons/Icon_instellingen.png");
-            background-color: #999998;
-            background-size: 50%;}
-            .h_profile:hover{background-image: url("../nav_icons/Icon_instellingenhover.png");}
-
-/* foto's op homepage */
-.col-2 .boxLR, .col-2 .boxLR1,.col-2 .boxLR2,.col-2 .boxLR3,.col-2 .boxLR4,.col-2 .boxLR5,.col-2 .boxLR6,.col-2 .boxLR7{
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0px;
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 20px 75px 20px;
+    border: 1px solid #888;
+    width: 50%;
 }
-.col-2 .boxLR{background-image: url("../images/Niel.jpg");}
-.col-2 .boxLR1{background-image: url("../images/Jodie.jpg");}
-.col-2 .boxLR2{background-image: url("../images/Tomas.jpg");}
-.col-2 .boxLR3{background-image: url("../images/Jelle.jpg");}
-.col-2 .boxLR4{background-image: url("../images/Jelis.jpg");}
-.col-2 .boxLR5{background-image: url("../images/Sharon.jpg");}
-.col-2 .boxLR6{ background-image: url("../images/Jason.jpg");}
-.col-2 .boxLR7{background-image: url("../images/Jens.jpg");}
-/******************** CHANGE BY MOBILE **********************/
-@media only screen and (max-width: 620px) {
 
-.h_friends, .h_gorun, .h_home, .h_map, .h_profile{height: 120px;}
-div.h_friendsMob{background-color: #AAC0AE;}
-div.h_mapMob{background-color: #FFD54F;}
-div.h_gorunMob{background-color: #9FAC65;}
-div.h_profileMob{background-color: #999998;}
+/* The Close Button */
+.closeRegister, .closeLogin, .closeDog {
+    color: #737b5b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    a.homeNavMob{color:white;}
-    div.navHomeBut{height: 120px;}
-    div.navHomeBut h2{
-        margin-top: 30px;
-        text-align: center;
+.closeRegister:hover, .closeLogin:hover,
+.closeRegister:focus, .closeLogin:focus {
+    color: #aac0ae;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeRegister, .closeDog{margin-top: -47px;}
+
+h2.pop-upLogin{float: left;}
+
+div.knopLogin{
+    margin:none;
+    margin-left: 200px;
+    width: 263px !important;
+}
+
+p.form{
+    margin-bottom:-20px;
+    margin-top:10px;
+}
+
+div.regist1{
+    float: left;
+}
+
+div.regist2{
+    float: left;
+}
+
+/* Full-width inputs */ 
+input[type=text], input[type=password] {
+    width: 300px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: normal_regular;
+    color: #555555;
+}
+
+/***********************************  Login  ***********************************/
+form.login{width: 100%;}
+
+/* Set a style for all buttons */
+button {
+    background-color: #9FAC65;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+
+/* button class login */
+button.login{margin: 0 20px 0 0;}
+
+/*checkbox*/
+input.onthouden{margin: 20px 0 15px 0;}
+
+
+/* Add padding to containers */
+.containerLogin {
+    padding: 0 0 0 20px;;
+    width: 80%;
+    float: left;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/******************** CHANGE BY MOBILE LOGIN **********************/
+@media screen and (max-width: 620px) {
+
+    /* Information */
+div.information{width: 200px;}
+     
+/* knoppen */
+div.knop{
+    width: 317px;
+    margin-left:0;
+    }
+
+/* Modal Content */
+.modal-content {width: 90%;}
+
+input[type=text], input[type=password] {
+    width: 263px;
+}
+
+
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    button.login{
+        width: 100%;
+        margin-top: 10px;
     }
 
 }/*tot hier veranderingen bij mobiel*/
 
-/*********************************************************************************************************************/
-/*********************************** Friendslist ***********************************/
-/*********************************************************************************************************************/
-.Titel2{
-    background-image:url("../images/H2_bg.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 25px;
-    margin-left: -22px;
-    color: white;
-}
-
-.Titel2 h2{margin-left: 7px;}
-
-div.friendslistNamePoints{margin-top: 17px;}
-
-hr{
-    border-color: #DADADA;
-    border:solid;
-    opacity: 0.2;
-}
 
 /*********************************************************************************************************************/
 /***********************************  Map  ***********************************/
@@ -306,6 +381,8 @@ iframe{
     height:450px; 
     border:0;
 }
+
+
 
 /******************** CHANGE BY MOBILE MAP **********************/
 @media only screen and (max-width: 620px) {
@@ -352,7 +429,7 @@ p.list_gorun{font-family: normal_bold;}
 
 /*gorun ivm weergave drukke knoppen*/
 #panel {display: none;}
-#evenstijlveranderen{height:262px;}
+#panel_height{height:213px;}
 
 /******************** CHANGE BY MOBILE GORUN **********************/
 @media only screen and (max-width: 620px) {
@@ -369,234 +446,7 @@ div.ChoseYourOpties{width: 100%;}
 }/*tot hier veranderingen bij mobiel*/
 
 
-/*********************************************************************************************************************/
-/***********************************  Profile  ***********************************/
-/*********************************************************************************************************************/
 
-/* profielfoto*/
-div.profilePic{
-    background-image:url("../images/Jodie.jpg");
-    background-size: cover;
-    width: 200px;
-    height:250px;
-    background-repeat: no-repeat;
-    float: left;
-}
-
-/* Information */
-div.information{
-    width: 500px;
-    margin-left: 10px;
-    float: left;
-
-}
-        div.information p {margin-bottom: 10px; }
-
-/** HONDEN EN GELOPEN KM ***/
-div.myDogs, div.numKm{height: 290px;}
-    /* Honden toevoegen */
-    div.informationDog{height: 150px;}
-
-    div.knopDog{
-        float: left;
-        margin: 10px 0 0 0;
-    }
-
-    div.myDogs{background-color: rgba(170,192,174, 0.3);}
-
-    div.picHond{
-        width: 100px;
-        height: 150px;
-        background-image: url("../images/hond1.jpg");
-        background-size: cover;
-        background-position: center;
-        float: left;
-        margin-right: 10px;
-    }
-
-    /* Gelopen km */
-    div.numKm{background-color: rgba(255,213,79,0.3);}
-
-/* pop up Login */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px 20px 75px 20px;
-    border: 1px solid #888;
-    width: 50%;
-}
-
-/* The Close Button */
-.closeRegister, .closeLogin, .closeDog {
-    color: #737b5b;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closeRegister:hover, .closeLogin:hover,
-.closeRegister:focus, .closeLogin:focus {
-    color: #aac0ae;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.closeRegister, .closeDog{margin-top: -47px;}
-
-h2.pop-upLogin{float: left;}
-
-div.knopLoginPROFILE{
-    margin:none;
-    margin-left: 200px;
-    width: 263px !important;
-}
-
-p.form{
-    margin-bottom:-20px;
-    margin-top:10px;
-}
-
-div.regist1{
-    float: left;
-}
-
-div.regist2{
-    float: left;
-}
-
-
-/* Full-width inputs */ /* BELANGRIJK VOOR PROFILE INPUTS!!!! */
-input[type=text], input[type=password] {
-    width: 300px;
-    padding: 10px 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-family: normal_regular;
-    color: #555555;
-}
-
-/******************** CHANGE BY MOBILE PROFILE **********************/
-@media only screen and (max-width: 620px) {
-
-/* profielfoto*/
-div.profilePic{
-    height: 100px;
-    width: 100px;
-}
-
-/* Information */
-div.information{width: 200px;}
-     
-/* knoppen */
-div.knop{
-    width: 317px;
-    margin-left:0;
-    }
-
-/** HONDEN EN GELOPEN KM ***/
-div.myDogs, div.numKm{
-    width: 339px;
-    float: left;
-}
-
-    /* Gelopen km */
-    div.numKm{margin-bottom: 40px;}
-
-/* Modal Content */
-.modal-content {width: 90%;}
-
-input[type=text], input[type=password] {
-    width: 263px;
-}
-
-}/*tot hier veranderingen bij mobiel*/
-
-/*********************************************************************************************************************/
-/***********************************  Login  ***********************************/
-/*********************************************************************************************************************/
-
-form.login{width: 100%;}
-
-/* Set a style for all buttons */
-button {
-    background-color: #9FAC65;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 20%;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-    text-align: center;
-    margin: 0 0 0 0;
-    height: 326px;
-    width: 20%;
-    float: left;
-}
-
-/* Avatar image */
-div.avatar {
-    background-image:url("../images/Niel.jpg");
-    width: 100%;
-    height:100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: auto;
-}
-
-/* button class login */
-button.login{margin: 0 20px 0 0;}
-
-/*checkbox*/
-input.onthouden{margin: 20px 0 15px 0;}
-
-
-/* Add padding to containers */
-.containerLogin {
-    padding: 0 0 0 20px;;
-    width: 80%;
-    float: left;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/******************** CHANGE BY MOBILE LOGIN **********************/
-@media screen and (max-width: 620px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-
-    button.login{
-        width: 100%;
-        margin-top: 10px;
-    }
-
-}/*tot hier veranderingen bij mobiel*/
 
 /*********************************************************************************************************************/
 /***********************************  Footer bij desktop laten verdwijnen  ***********************************/
@@ -638,10 +488,41 @@ footer a div.navBut{
     display: inline;
 }
 
-div.visByDesktopFriends{margin-top: -32px;}
 
 p.pFooter{display: none;}
 
 }/*tot hier veranderingen bij mobiel*/
 
+/*********************************************************************************************************************/
+/***********************************  IMAGES  ***********************************/
+/*********************************************************************************************************************/
 
+img.hond1, img.hond2{
+    height:200px;
+    float: none;
+}
+
+p.logout{
+    color:#DADADA;
+    float:left;
+    margin-right:5px;
+}
+
+div.logout_img{
+    float: none;
+}
+
+/******************** CHANGE BY MOBILE **********************/
+@media only screen and (max-width: 620px) {
+    
+    img.hond2{
+        display: none;
+    }
+    
+    p.logout{
+        float: none;
+        margin-right:0px;
+        text-align: center;
+    }
+
+    }/*tot hier veranderingen bij mobiel*/

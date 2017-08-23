@@ -33,17 +33,20 @@ h1.desktop{
     display: initial;
 }
 
-    h1.mobile{
+h1.mobile{
         font-size: 0px;
         display: none;
-    }
+}
 
 h2{
     font-family: title_second;
     margin: 0 0 20px 0;
     color: #444444;
 }
-        h2.navGrootmob{color: white;}
+        
+h2.navGrootmob{
+    color: white;
+}
 
 h3{
     font-family: normal_bold; 
@@ -80,8 +83,8 @@ h1.mobile{
         font-size: 26px;
         visibility: visible;
         font-family: title_first;
-        float:left;
-        color: white;
+        float: #fff left;
+        color:;
         margin: 4px 0 0 20px; 
     }
 
@@ -241,22 +244,8 @@ div.navDesktop{
             background-size: 50%;}
             .h_profile:hover{background-image: url("../nav_icons/Icon_instellingenhover.png");}
 
-/* foto's op homepage */
-.col-2 .boxLR, .col-2 .boxLR1,.col-2 .boxLR2,.col-2 .boxLR3,.col-2 .boxLR4,.col-2 .boxLR5,.col-2 .boxLR6,.col-2 .boxLR7{
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0px;
-}
-.col-2 .boxLR{background-image: url("../images/Niel.jpg");}
-.col-2 .boxLR1{background-image: url("../images/Jodie.jpg");}
-.col-2 .boxLR2{background-image: url("../images/Tomas.jpg");}
-.col-2 .boxLR3{background-image: url("../images/Jelle.jpg");}
-.col-2 .boxLR4{background-image: url("../images/Jelis.jpg");}
-.col-2 .boxLR5{background-image: url("../images/Sharon.jpg");}
-.col-2 .boxLR6{ background-image: url("../images/Jason.jpg");}
-.col-2 .boxLR7{background-image: url("../images/Jens.jpg");}
+
+
 /******************** CHANGE BY MOBILE **********************/
 @media only screen and (max-width: 480px) {
 

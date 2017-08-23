@@ -2,7 +2,7 @@ body{
     background-color: #DADADA;
 }
 
-/******** BOXES *****/ /* dit bepaald hoe je tekst wordt uitgelijnd, maar ik denk dan boxLR ne centrale moet worden */
+/******** BOXES *****/ 
 .box{
       font-size: 16px;
 }
@@ -45,7 +45,7 @@ div.containerDesktop, div.container{
     background-color:white;
     width: 1080px;
     height: auto;
-    margin: 0 auto 0 auto; /* BROL -> Boven Rechts Onder Links */
+    margin: 0 auto 0 auto; 
     padding: 10px 0 0 0;
 }
 
@@ -162,13 +162,8 @@ div.containerMobile{
     margin-top: 37px;
 }
 
-/* bij de andere pages (dus niet home) gaat alles te veel naar boven... */
-div.marginByMobFriends{
-  margin-top: 55px;
-}
-
 div.marginByMobMap{
-  margin: 20px 0 60px 0;
+  margin: 25px 0 60px 0;
 }
 
 div.marginByMobProf{
@@ -179,12 +174,8 @@ div.marginByMobGorun{
   margin-top:16px;
 }
 
-div.containerfriends{
-  padding-bottom: 55px;
-}
-
 .containerHomeMob{
   padding-top:50px;
 }
 
-} /* sluiting @media */
+}
